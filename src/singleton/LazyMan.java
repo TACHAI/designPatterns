@@ -1,5 +1,7 @@
 package singleton;
 
+import java.util.UUID;
+
 /**
  * 懒汉模式 双重检查锁
  * 例子系统要求提供唯一的一个序列号生成器
@@ -29,5 +31,9 @@ public class LazyMan {
             }
         }
         return instance;
+    }
+
+    public Long getUUID(){
+        return UUID.randomUUID().timestamp();
     }
 }
