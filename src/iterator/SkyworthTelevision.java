@@ -8,7 +8,7 @@ package iterator;
  */
 public class SkyworthTelevision implements Television {
 
-    private Object[] obj={"CCTV-1","CCTV-2","CCTV-3"};
+    private Object[] obj={"CCTV-1","CCTV-2","CCTV-3","CCTV-4"};
 
     @Override
     public TVIterator createIterator() {
