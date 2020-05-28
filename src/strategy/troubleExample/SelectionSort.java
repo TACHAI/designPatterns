@@ -1,0 +1,29 @@
+package strategy.troubleExample;
+
+/**
+ * Create by tachai on 2020-05-28 21:10
+ * gitHub https://github.com/TACHAI
+ * Email tc1206966083@gmail.com
+ */
+public class SelectionSort implements Sort {
+    @Override
+    public int[] sort(int[] arr) {
+        int len = arr.length;
+        int temp;
+        for(int i=0;i<len;i++){
+            temp = arr[i];
+            int j;
+            int smallestLocation =i;
+            for(j=i+1;j<len;j++){
+                if(arr[j]<temp){
+                    temp=arr[j];
+                    smallestLocation=j;
+                }
+            }
+            arr[smallestLocation]=arr[i];
+            arr[i]=temp;
+        }
+        System.out.println("选择排序");
+        return arr;
+    }
+}
